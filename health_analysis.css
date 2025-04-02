@@ -1,93 +1,160 @@
-/* Basic CSS for the navigation bar */
-
-*{
+/* General Reset */
+body, h1, h2, p, ul, li, input, button, select, label {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-nav {
-    background-color: #f0f0f0;
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0078d7;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-  }
-  
-  nav ul {
-    list-style-type: none;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
-  }
-  
-  /* Basic CSS for the form elements */
-  body {
-    font-family: Arial, sans-serif;
-    /* margin: 20px; */
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  div {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  select {
-    width: 200px;
+}
+
+nav ul li input {
     padding: 5px;
-  }
-  
-  button {
-    padding: 7px 15px;
-    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+}
+
+nav ul li button {
+    background-color: #005a9e;
     color: white;
     border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Basic CSS for the report section */
-  h2 {
-    margin-top: 30px;
-  }
-  
-  #report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-  }
-#result{
-  height: 400px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
 }
-  #result img{
-    width: 200px;
-    height: 100px;
-  }
-  
+
+nav ul li button:hover {
+    background-color: #003f73;
+}
+
+/* Container Styling */
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Form Styling */
+.analysisForm, .searchCondition {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.analysisForm h1, .analysisForm h2 {
+    margin-bottom: 20px;
+    color: #0078d7;
+}
+
+.analysisForm div {
+    margin-bottom: 15px;
+}
+
+.analysisForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.analysisForm input, .analysisForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.analysisForm button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.analysisForm button:hover {
+    background-color: #005a9e;
+}
+
+/* Report Styling */
+#report {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Search Results Styling */
+.searchCondition #result {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.searchCondition #result h2 {
+    color: #0078d7;
+    margin-bottom: 10px;
+}
+
+.searchCondition #result img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.searchCondition #result p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
