@@ -8,7 +8,7 @@ function addPatient() {
     const name = document.getElementById("name");
     const age = document.getElementById("Age");
     const gender = document.querySelector('input[name="gender"]:checked');
-    console.log(gender);
+    console.log(gender); // for debugging
     const condition = document.getElementById("condition");
 
     if(name && age && gender && condition) {
